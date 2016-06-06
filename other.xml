@@ -47,4 +47,10 @@
     <option name="SEND_ENVIRONMENT_VARIABLES_TO_SERVER" value="false" />
     <option name="SHOW_PATH" value="true" />
   </component>
+  <component name="ErrorReportConfigurable">
+    <option name="ITN_LOGIN" value="" />
+    <option name="ITN_PASSWORD_CRYPT" value="" />
+    <option name="KEEP_ITN_PASSWORD" value="false" />
+    <option name="EMAIL" value="" />
+  </component>
 </application>
