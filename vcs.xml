@@ -6,8 +6,12 @@
           <option name="url" value="git@bitbucket.org:devcellmidia/cellmidia-auth.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/mingomax/silex-cors-provider.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="C:\Users\Mingo\Developer\Cellmidia" />
+    <option name="cloneParentDir" value="$USER_HOME$/Developer" />
   </component>
 </application>
