@@ -1,5 +1,5 @@
 <application>
   <component name="MarkdownApplicationSettings">
-    <MarkdownCssSettings StylesheetUri="file:$USER_HOME$/Library/Application%20Support/PhpStorm2016.2/markdown/lib/darcula.css" />
+    <MarkdownCssSettings StylesheetUri="jar:file:/Applications/PhpStorm%202016.2%20EAP.app/Contents/plugins/markdown/lib/markdown.jar!/org/intellij/plugins/markdown/settings/darcula.css" />
   </component>
 </application>
