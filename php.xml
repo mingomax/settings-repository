@@ -12,8 +12,8 @@
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
       <interpreter name="PHP 7">
-        <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php70/7.0.7/bin/php-cgi" php_cli="/usr/local/Cellar/php70/7.0.7/bin/php" path_separator=":" remote_host="127.0.0.1" version="7.0.7">
-          <additional_php_ini>/usr/local/etc/php/7.0/conf.d/ext-apcu.ini, /usr/local/etc/php/7.0/conf.d/ext-imagick.ini, /usr/local/etc/php/7.0/conf.d/ext-intl.ini, /usr/local/etc/php/7.0/conf.d/ext-opcache.ini, /usr/local/etc/php/7.0/conf.d/ext-xdebug.ini, /usr/local/etc/php/7.0/conf.d/ext-yaml.ini</additional_php_ini>
+        <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php70/7.0.8/bin/php-cgi" php_cli="/usr/local/Cellar/php70/7.0.8/bin/php" path_separator=":" remote_host="127.0.0.1" version="7.0.8">
+          <additional_php_ini>/usr/local/etc/php/7.0/conf.d/ext-apcu.ini, /usr/local/etc/php/7.0/conf.d/ext-imagick.ini, /usr/local/etc/php/7.0/conf.d/ext-intl.ini, /usr/local/etc/php/7.0/conf.d/ext-mongodb.ini, /usr/local/etc/php/7.0/conf.d/ext-opcache.ini, /usr/local/etc/php/7.0/conf.d/ext-redis.ini, /usr/local/etc/php/7.0/conf.d/ext-xdebug.ini, /usr/local/etc/php/7.0/conf.d/ext-yaml.ini</additional_php_ini>
           <configuration_file>/usr/local/etc/php/7.0/php.ini</configuration_file>
           <configuration_options>
             <configuration_option name="SMTP" value="localhost" />
@@ -24,7 +24,7 @@
             <configuration_option name="apc.enabled" value="1" />
             <configuration_option name="apc.entries_hint" value="4096" />
             <configuration_option name="apc.gc_ttl" value="3600" />
-            <configuration_option name="apc.mmap_file_mask" value="/tmp/apc.DSDZGf" />
+            <configuration_option name="apc.mmap_file_mask" value="/tmp/apc.UJTSPX" />
             <configuration_option name="apc.preload_path" value="" />
             <configuration_option name="apc.serializer" value="php" />
             <configuration_option name="apc.shm_segments" value="1" />
@@ -81,7 +81,7 @@
             <configuration_option name="exif.encode_unicode" value="ISO-8859-15" />
             <configuration_option name="exit_on_timeout" value="0" />
             <configuration_option name="expose_php" value="1" />
-            <configuration_option name="extension_dir" value="/usr/local/Cellar/php70/7.0.7/lib/php/extensions/no-debug-non-zts-20151012" />
+            <configuration_option name="extension_dir" value="/usr/local/Cellar/php70/7.0.8/lib/php/extensions/no-debug-non-zts-20151012" />
             <configuration_option name="file_uploads" value="1" />
             <configuration_option name="filter.default" value="unsafe_raw" />
             <configuration_option name="filter.default_flags" value="" />
@@ -131,6 +131,7 @@
             <configuration_option name="mbstring.strict_detection" value="0" />
             <configuration_option name="mbstring.substitute_character" value="" />
             <configuration_option name="memory_limit" value="128M" />
+            <configuration_option name="mongodb.debug" value="" />
             <configuration_option name="mysqli.allow_local_infile" value="1" />
             <configuration_option name="mysqli.allow_persistent" value="1" />
             <configuration_option name="mysqli.default_host" value="" />
@@ -211,6 +212,15 @@
             <configuration_option name="precision" value="14" />
             <configuration_option name="realpath_cache_size" value="16K" />
             <configuration_option name="realpath_cache_ttl" value="120" />
+            <configuration_option name="redis.arrays.autorehash" value="" />
+            <configuration_option name="redis.arrays.functions" value="" />
+            <configuration_option name="redis.arrays.hosts" value="" />
+            <configuration_option name="redis.arrays.index" value="" />
+            <configuration_option name="redis.arrays.names" value="" />
+            <configuration_option name="redis.arrays.previous" value="" />
+            <configuration_option name="redis.clusters.read_timeout" value="" />
+            <configuration_option name="redis.clusters.seeds" value="" />
+            <configuration_option name="redis.clusters.timeout" value="" />
             <configuration_option name="register_argc_argv" value="1" />
             <configuration_option name="report_memleaks" value="1" />
             <configuration_option name="report_zend_debug" value="0" />
@@ -306,7 +316,7 @@
             <configuration_option name="xdebug.profiler_output_dir" value="/tmp" />
             <configuration_option name="xdebug.profiler_output_name" value="cachegrind.out.%p" />
             <configuration_option name="xdebug.remote_addr_header" value="" />
-            <configuration_option name="xdebug.remote_autostart" value="0" />
+            <configuration_option name="xdebug.remote_autostart" value="1" />
             <configuration_option name="xdebug.remote_connect_back" value="0" />
             <configuration_option name="xdebug.remote_cookie_expire_time" value="3600" />
             <configuration_option name="xdebug.remote_enable" value="0" />
@@ -384,6 +394,7 @@
             <extension name="ldap" />
             <extension name="libxml" />
             <extension name="mbstring" />
+            <extension name="mongodb" />
             <extension name="mysqli" />
             <extension name="mysqlnd" />
             <extension name="odbc" />
@@ -394,6 +405,7 @@
             <extension name="pdo_sqlite" />
             <extension name="posix" />
             <extension name="readline" />
+            <extension name="redis" />
             <extension name="session" />
             <extension name="shmop" />
             <extension name="soap" />
