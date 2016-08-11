@@ -10,8 +10,12 @@
           <option name="url" value="https://github.com/mingomax/silex-cors-provider.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="git@bitbucket.org:devcellmidia/cm-gateways.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="$USER_HOME$/Developer" />
+    <option name="cloneParentDir" value="$USER_HOME$/Developer/Cellmidia" />
   </component>
 </application>
