@@ -298,7 +298,7 @@
       </interpreter>
       <interpreter name="PHP 7.0">
         <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php70/7.0.10_1/bin/php-cgi" php_cli="/usr/local/Cellar/php70/7.0.10_1/bin/php" path_separator=":" version="7.0.10">
-          <additional_php_ini>/usr/local/etc/php/7.0/conf.d/ext-xdebug.ini</additional_php_ini>
+          <additional_php_ini>/usr/local/etc/php/7.0/conf.d/ext-intl.ini, /usr/local/etc/php/7.0/conf.d/ext-xdebug.ini</additional_php_ini>
           <configuration_file>/usr/local/etc/php/7.0/php.ini</configuration_file>
           <configuration_options>
             <configuration_option name="SMTP" value="localhost" />
@@ -373,6 +373,9 @@
             <configuration_option name="include_path" value=".:" />
             <configuration_option name="input_encoding" value="" />
             <configuration_option name="internal_encoding" value="" />
+            <configuration_option name="intl.default_locale" value="" />
+            <configuration_option name="intl.error_level" value="0" />
+            <configuration_option name="intl.use_exceptions" value="0" />
             <configuration_option name="ldap.max_links" value="-1" />
             <configuration_option name="log_errors" value="1" />
             <configuration_option name="log_errors_max_len" value="1024" />
@@ -603,6 +606,7 @@
             <extension name="gettext" />
             <extension name="hash" />
             <extension name="iconv" />
+            <extension name="intl" />
             <extension name="json" />
             <extension name="ldap" />
             <extension name="libxml" />
