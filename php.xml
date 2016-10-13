@@ -297,13 +297,27 @@
         </phpinfo>
       </interpreter>
       <interpreter name="PHP 7.0">
-        <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php70/7.0.10_1/bin/php-cgi" php_cli="/usr/local/Cellar/php70/7.0.10_1/bin/php" path_separator=":" version="7.0.10">
-          <additional_php_ini>/usr/local/etc/php/7.0/conf.d/ext-intl.ini, /usr/local/etc/php/7.0/conf.d/ext-xdebug.ini</additional_php_ini>
+        <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php70/7.0.11_5/bin/php-cgi" php_cli="/usr/local/Cellar/php70/7.0.11_5/bin/php" path_separator=":" version="7.0.11">
+          <additional_php_ini>/usr/local/etc/php/7.0/conf.d/ext-amqp.ini, /usr/local/etc/php/7.0/conf.d/ext-intl.ini, /usr/local/etc/php/7.0/conf.d/ext-xdebug.ini</additional_php_ini>
           <configuration_file>/usr/local/etc/php/7.0/php.ini</configuration_file>
           <configuration_options>
             <configuration_option name="SMTP" value="localhost" />
             <configuration_option name="allow_url_fopen" value="1" />
             <configuration_option name="allow_url_include" value="" />
+            <configuration_option name="amqp.auto_ack" value="0" />
+            <configuration_option name="amqp.channel_max" value="256" />
+            <configuration_option name="amqp.connect_timeout" value="0" />
+            <configuration_option name="amqp.frame_max" value="131072" />
+            <configuration_option name="amqp.heartbeat" value="0" />
+            <configuration_option name="amqp.host" value="localhost" />
+            <configuration_option name="amqp.login" value="guest" />
+            <configuration_option name="amqp.password" value="guest" />
+            <configuration_option name="amqp.port" value="5672" />
+            <configuration_option name="amqp.prefetch_count" value="3" />
+            <configuration_option name="amqp.read_timeout" value="0" />
+            <configuration_option name="amqp.timeout" value="" />
+            <configuration_option name="amqp.vhost" value="/" />
+            <configuration_option name="amqp.write_timeout" value="0" />
             <configuration_option name="arg_separator.input" value="&amp;" />
             <configuration_option name="arg_separator.output" value="&amp;" />
             <configuration_option name="assert.active" value="1" />
@@ -351,7 +365,7 @@
             <configuration_option name="exif.encode_unicode" value="ISO-8859-15" />
             <configuration_option name="exit_on_timeout" value="0" />
             <configuration_option name="expose_php" value="1" />
-            <configuration_option name="extension_dir" value="/usr/local/Cellar/php70/7.0.10_1/lib/php/extensions/no-debug-non-zts-20151012" />
+            <configuration_option name="extension_dir" value="/usr/local/Cellar/php70/7.0.11_5/lib/php/extensions/no-debug-non-zts-20151012" />
             <configuration_option name="file_uploads" value="1" />
             <configuration_option name="filter.default" value="unsafe_raw" />
             <configuration_option name="filter.default_flags" value="" />
@@ -497,7 +511,7 @@
             <configuration_option name="sys_temp_dir" value="" />
             <configuration_option name="track_errors" value="1" />
             <configuration_option name="unserialize_callback_func" value="" />
-            <configuration_option name="upload_max_filesize" value="2M" />
+            <configuration_option name="upload_max_filesize" value="128M" />
             <configuration_option name="upload_tmp_dir" value="" />
             <configuration_option name="url_rewriter.tags" value="a=href,area=href,frame=src,input=src,form=fakeentry" />
             <configuration_option name="user_agent" value="" />
@@ -590,6 +604,7 @@
             <extension name="Reflection" />
             <extension name="SPL" />
             <extension name="SimpleXML" />
+            <extension name="amqp" />
             <extension name="bcmath" />
             <extension name="bz2" />
             <extension name="calendar" />
