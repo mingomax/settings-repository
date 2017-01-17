@@ -18,7 +18,7 @@
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
       <interpreter name="PHP 5.6">
-        <phpinfo binary_type="PHP" php_cli="/usr/bin/php" path_separator=":" version="5.6.24">
+        <phpinfo binary_type="PHP" php_cli="/usr/bin/php" path_separator=":" version="5.6.28">
           <additional_php_ini />
           <configuration_file />
           <configuration_options>
@@ -159,6 +159,12 @@
             <configuration_option name="pcre.backtrack_limit" value="1000000" />
             <configuration_option name="pcre.recursion_limit" value="100000" />
             <configuration_option name="pdo_mysql.default_socket" value="/var/mysql/mysql.sock" />
+            <configuration_option name="pgsql.allow_persistent" value="1" />
+            <configuration_option name="pgsql.auto_reset_persistent" value="0" />
+            <configuration_option name="pgsql.ignore_notice" value="0" />
+            <configuration_option name="pgsql.log_notice" value="0" />
+            <configuration_option name="pgsql.max_links" value="-1" />
+            <configuration_option name="pgsql.max_persistent" value="-1" />
             <configuration_option name="phar.cache_list" value="" />
             <configuration_option name="phar.readonly" value="1" />
             <configuration_option name="phar.require_hash" value="1" />
@@ -270,7 +276,9 @@
             <extension name="openssl" />
             <extension name="pcre" />
             <extension name="pdo_mysql" />
+            <extension name="pdo_pgsql" />
             <extension name="pdo_sqlite" />
+            <extension name="pgsql" />
             <extension name="posix" />
             <extension name="readline" />
             <extension name="session" />
