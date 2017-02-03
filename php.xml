@@ -305,7 +305,7 @@
         </phpinfo>
       </interpreter>
       <interpreter name="PHP 7.0">
-        <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php70/7.0.12_5/bin/php-cgi" php_cli="/usr/local/Cellar/php70/7.0.12_5/bin/php" path_separator=":" version="7.0.12">
+        <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php70/7.0.15_8/bin/php-cgi" php_cli="/usr/local/Cellar/php70/7.0.15_8/bin/php" path_separator=":" version="7.0.15" warning="PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/opt/php70-mcrypt/mcrypt.so' - dlopen(/usr/local/opt/php70-mcrypt/mcrypt.so, 9): Library not loaded: /usr/local/opt/libtool/lib/libltdl.7.dylib&#10;  Referenced from: /usr/local/opt/php70-mcrypt/mcrypt.so&#10;  Reason: image not found in Unknown on line 0&#10;">
           <additional_php_ini>/usr/local/etc/php/7.0/conf.d/ext-amqp.ini, /usr/local/etc/php/7.0/conf.d/ext-intl.ini, /usr/local/etc/php/7.0/conf.d/ext-mcrypt.ini, /usr/local/etc/php/7.0/conf.d/ext-xdebug.ini</additional_php_ini>
           <configuration_file>/usr/local/etc/php/7.0/php.ini</configuration_file>
           <configuration_options>
@@ -373,7 +373,7 @@
             <configuration_option name="exif.encode_unicode" value="ISO-8859-15" />
             <configuration_option name="exit_on_timeout" value="0" />
             <configuration_option name="expose_php" value="1" />
-            <configuration_option name="extension_dir" value="/usr/local/Cellar/php70/7.0.12_5/lib/php/extensions/no-debug-non-zts-20151012" />
+            <configuration_option name="extension_dir" value="/usr/local/Cellar/php70/7.0.15_8/lib/php/extensions/no-debug-non-zts-20151012" />
             <configuration_option name="file_uploads" value="1" />
             <configuration_option name="filter.default" value="unsafe_raw" />
             <configuration_option name="filter.default_flags" value="" />
@@ -419,8 +419,6 @@
             <configuration_option name="mbstring.language" value="neutral" />
             <configuration_option name="mbstring.strict_detection" value="0" />
             <configuration_option name="mbstring.substitute_character" value="" />
-            <configuration_option name="mcrypt.algorithms_dir" value="" />
-            <configuration_option name="mcrypt.modes_dir" value="" />
             <configuration_option name="memory_limit" value="128M" />
             <configuration_option name="mysqli.allow_local_infile" value="1" />
             <configuration_option name="mysqli.allow_persistent" value="1" />
@@ -602,7 +600,7 @@
             <configuration_option name="zlib.output_handler" value="" />
           </configuration_options>
           <debuggers>
-            <debugger_info debugger="xdebug" debugger_version="2.4.1">
+            <debugger_info debugger="xdebug" debugger_version="2.5.0">
               <debug_extensions />
             </debugger_info>
           </debuggers>
@@ -636,7 +634,6 @@
             <extension name="ldap" />
             <extension name="libxml" />
             <extension name="mbstring" />
-            <extension name="mcrypt" />
             <extension name="mysqli" />
             <extension name="mysqlnd" />
             <extension name="odbc" />
