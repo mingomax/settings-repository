@@ -4,6 +4,7 @@
       <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
       <mapping pattern=".editorconfig" type="PLAIN_TEXT" />
       <mapping pattern="console" type="PLAIN_TEXT" />
+      <mapping pattern="docker-compose-yml" type="PLAIN_TEXT" />
       <mapping pattern=".gitattributes" type="PLAIN_TEXT" />
       <mapping ext="tmpl" type="PLAIN_TEXT" />
       <mapping ext="dev" type="PLAIN_TEXT" />
