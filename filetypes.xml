@@ -1,15 +1,16 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
-      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
+      <mapping pattern="docker-compose-yml" type="PLAIN_TEXT" />
       <mapping pattern=".editorconfig" type="PLAIN_TEXT" />
       <mapping pattern="console" type="PLAIN_TEXT" />
-      <mapping pattern="docker-compose-yml" type="PLAIN_TEXT" />
       <mapping pattern=".gitattributes" type="PLAIN_TEXT" />
-      <mapping ext="tmpl" type="PLAIN_TEXT" />
-      <mapping ext="dev" type="PLAIN_TEXT" />
-      <mapping ext="go" type="PLAIN_TEXT" />
+      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
+      <mapping ext="apib" type="PLAIN_TEXT" />
       <mapping ext="dist" type="PLAIN_TEXT" />
+      <mapping ext="tmpl" type="PLAIN_TEXT" />
+      <mapping ext="go" type="PLAIN_TEXT" />
+      <mapping ext="dev" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
