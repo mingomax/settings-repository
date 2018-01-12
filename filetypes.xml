@@ -11,6 +11,7 @@
       <mapping ext="tmpl" type="PLAIN_TEXT" />
       <mapping ext="go" type="PLAIN_TEXT" />
       <mapping ext="dev" type="PLAIN_TEXT" />
+      <mapping ext="py" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
