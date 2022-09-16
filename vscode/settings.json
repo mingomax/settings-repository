@@ -1,0 +1,148 @@
+{
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.editor.enablePreview": false,
+  "editor.fontFamily": "Meslo LG S DZ for Powerline, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 20,
+  "editor.fontWeight": "800",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.tabSize": 4,
+  "editor.rulers": [80, 120],
+  "editor.codeActionsOnSave": {
+    
+    "source.fixAll": true,
+    "addMissingImports": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "json.format.enable": false,
+  "editor.suggestSelection": "first",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "debug.showInStatusBar": "always",
+  "explorer.confirmDelete": false,
+  "sync.gist": "3821b580412b31c3999b9702331467df",
+  "files.associations": {
+    "*.inc": "php",
+    "*.module": "php",
+    "*.install": "php",
+    "*.theme": "php",
+    "*.profile": "php",
+    "*.tpl.php": "php",
+    "*.test": "php",
+    "*.php": "php",
+    "*.info": "ini"
+  },
+  "eslint.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "terminal.integrated.fontSize": 20,
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontWeight": "bold",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.fullReload": true,
+  "liveServer.settings.root": "/src",
+  "liveSassCompile.settings.includeItems": [
+    "scss/vendors/_base.scss",
+    "scss/vendors/_variables.scss",
+    "scss/main.scss"
+  ],
+  "liveSassCompile.settings.autoprefix": [
+    "> 5%",
+    "last 3 version",
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 edge version",
+    "not ie < 11",
+    "iOS >= 12",
+    "last 2 safari version",
+  ],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/dist/assets/css"
+    }
+  ],
+  "liveServer.settings.port": 5503,
+  "vscode-edge-devtools.mirrorEdits": true,
+  "vscode-edge-devtools.browserFlavor": "Dev",
+  "vscode-edge-devtools.hostname": "0.0.0.0",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "redhat.telemetry.enabled": true,
+  "workbench.iconTheme": "vscode-great-icons",
+  "editor.language.brackets": [
+
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  "code-runner.executorMapByFileExtension": {
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript //Nologo",
+    ".scala": "scala",
+    ".jl": "julia",
+    ".cr": "crystal",
+    ".ml": "ocaml",
+    ".exs": "elixir",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".rkt": "racket",
+    ".scm": "csi -script",
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".dart": "dart",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".hs": "runhaskell",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".csproj": "dotnet run --project",
+    ".fsproj": "dotnet run --project",
+    ".lisp": "sbcl --script",
+    ".kit": "kitc --run",
+    ".v": "v run",
+    ".vsh": "v run",
+    ".sass": "sass --style expanded",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    ".ring": "ring"
+  },
+  "composer.executablePath": "/usr/local/bin/composer",
+  "phpcs.enable": false,
+  "phpcs.standard": "/home/domingost/.config/composer/vendor/drupal/coder/coder_sniffer/Drupal",
+  "phpcs.ignorePatterns": [
+    "*/ignored-file.php",
+    "*/ignored-dir/*"
+  ],
+  "php-cs-fixer.config": ".php-cs-fixer.php;.php-cs-fixer.dist.php;.php_cs;.php_cs.dist",
+  "[php]": {
+    "editor.formatOnSave": true
+  },
+  "php-docblocker.gap": true,
+  "php-docblocker.useShortNames": true,
+  "php.suggest.basic": false,
+  "intelephense.format.braces": "k&r",
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "scssLint.configDir": "$HOME/.rbenv/versions/2.5.1/bin/scss-lint",
+  "npm.keybindingsChangedWarningShown": true,
+  "Notes.notesLocation": "/home/domingost/Documents",
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  },
+  "window.zoomLevel": 3,
+}
