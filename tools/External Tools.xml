@@ -1,9 +1,0 @@
-<toolSet name="External Tools">
-  <tool name="Prettier" description="Prettier lint" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
-    <exec>
-      <option name="COMMAND" value="$USER_HOME$/.nvm/versions/node/v9.5.0/lib/node_modules/prettier/bin-prettier.js" />
-      <option name="PARAMETERS" value="--write --single-quote --trailing-comma=all $FilePathRelativeToProjectRoot$" />
-      <option name="WORKING_DIRECTORY" value="$ProjectFileDir$" />
-    </exec>
-  </tool>
-</toolSet>
