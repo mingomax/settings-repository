@@ -1,0 +1,58 @@
+[
+  // ===== Terminal integrado =====
+  { "key": "ctrl+alt+t", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "ctrl+alt+1", "command": "workbench.action.terminal.new" },
+  { "key": "ctrl+alt+2", "command": "workbench.action.terminal.split" },
+  { "key": "ctrl+alt+up", "command": "workbench.action.terminal.focusPreviousPane", "when": "terminalFocus" },
+  { "key": "ctrl+alt+down", "command": "workbench.action.terminal.focusNextPane", "when": "terminalFocus" },
+  { "key": "ctrl+alt+.", "command": "workbench.action.terminal.clear" },
+
+  // Quarkus/Maven rápidos (envia comandos ao terminal ativo)
+  { "key": "ctrl+alt+q", "command": "workbench.action.terminal.sendSequence", "args": { "text": "mvn quarkus:dev\n" } },
+  { "key": "ctrl+alt+m", "command": "workbench.action.terminal.sendSequence", "args": { "text": "mvn -T 1C -DskipTests clean install\n" } },
+  { "key": "ctrl+alt+r", "command": "workbench.action.terminal.sendSequence", "args": { "text": "mvn -DskipTests package\n" } },
+  { "key": "ctrl+alt+l", "command": "workbench.action.terminal.sendSequence", "args": { "text": "mvn -q -DskipTests verify\n" } },
+
+  // ===== Navegação & layout =====
+  { "key": "ctrl+alt+o", "command": "workbench.action.quickOpen" },
+  { "key": "ctrl+alt+p", "command": "workbench.action.openRecent" },
+  { "key": "ctrl+alt+e", "command": "workbench.files.action.compareFileWith" },
+  { "key": "ctrl+alt+b", "command": "workbench.action.toggleSidebarVisibility" },
+  { "key": "ctrl+alt+z", "command": "workbench.action.toggleZenMode" },
+  { "key": "ctrl+alt+=", "command": "workbench.action.zoomIn" },
+  { "key": "ctrl+alt+-", "command": "workbench.action.zoomOut" },
+  { "key": "ctrl+alt+0", "command": "workbench.action.zoomReset" },
+
+  // ===== Edição & cursores =====
+  { "key": "ctrl+alt+shift+down", "command": "editor.action.insertCursorBelow" },
+  { "key": "ctrl+alt+shift+up", "command": "editor.action.insertCursorAbove" },
+  { "key": "ctrl+alt+d", "command": "editor.action.copyLinesDownAction" },
+  { "key": "ctrl+alt+/", "command": "editor.action.commentLine" },
+  { "key": "ctrl+alt+w", "command": "editor.action.trimTrailingWhitespace" },
+  { "key": "ctrl+alt+f", "command": "editor.action.formatDocument" },
+
+  // ===== Git / SCM =====
+  { "key": "ctrl+alt+g s", "command": "workbench.view.scm" },
+  { "key": "ctrl+alt+g d", "command": "git.openAllChanges" },
+  { "key": "ctrl+alt+g b", "command": "git.checkout" },
+  { "key": "ctrl+alt+g p", "command": "git.push" },
+  { "key": "ctrl+alt+g l", "command": "gitlens.showQuickRepoHistory" },
+
+  // ===== Testes (Java) & problemas =====
+  { "key": "ctrl+alt+t r", "command": "java.test.run" },
+  { "key": "ctrl+alt+t c", "command": "java.test.debug" },
+  { "key": "ctrl+alt+x", "command": "workbench.actions.view.problems" },
+
+  // ===== Utilidades =====
+  { "key": "ctrl+alt+k", "command": "filesExplorer.copyPathOfActiveFile" },
+  { "key": "ctrl+alt+shift+r", "command": "editor.action.rename" },
+  { "key": "ctrl+alt+i", "command": "workbench.action.showCommands" },
+  // ===== Markdown ====
+  { "key": "ctrl+alt+m", "command": "markdown.showPreview" },
+  { "key": "ctrl+alt+shift+m", "command": "markdown.showPreviewToSide" },
+  { "key": "ctrl+alt+t", "command": "markdown.extension.toc.create" },
+  { "key": "ctrl+alt+l", "command": "markdown.extension.list.toggleTaskList" },
+  { "key": "ctrl+alt+p", "command": "markdown-preview-enhanced.openPreview" },
+  { "key": "ctrl+alt+e", "command": "markdown-preview-enhanced.exportPdf" }
+]
+

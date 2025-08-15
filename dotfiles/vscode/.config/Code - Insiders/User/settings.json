@@ -1,0 +1,124 @@
+{
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 21,
+  "editor.lineHeight": 28,
+  "editor.fontWeight": "bold",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.renderControlCharacters": false,
+  // Terminal integrado usando Hack Nerd Font
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.letterSpacing": 0,
+  "terminal.integrated.fontWeight": "bold",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.drawBoldTextInBrightColors": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": { "path": "/usr/bin/zsh" }
+  },
+  "terminal.integrated.inheritEnv": true,
+  "workbench.editor.autoLockGroups": {
+    "imagePreview.previewEditor": true,
+    "mainThreadWebview-markdown.preview": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.autoSave": "onFocusChange",
+  "files.eol": "\n",
+  "redhat.telemetry.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "sudo": true
+  },
+  "sonarlint.pathToNodeExecutable": "/usr/local/bin/node",
+  "java.import.generatesMetadataFilesAtProjectRoot": true,
+  "files.exclude": {
+    "**/.project": true,
+    "**/.classpath": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.referencesCodeLens.enabled": true,
+  "java.autobuild.enabled": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.fetchOnPull": true,
+  "git.pruneOnFetch": true,
+  "git.openRepositoryInParentFolders": "always",
+  "git.suggestSmartCommit": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": true,
+  "gitlens.currentLine.enabled": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "type",
+  "search.useIgnoreFiles": true,
+  "search.useGlobalIgnoreFiles": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/target": true,
+    "**/build": true,
+    "**/.git": true,
+    "**/.idea": true
+  },
+  "breadcrumbs.enabled": true,
+  "editor.smoothScrolling": true,
+  "window.zoomLevel": 0,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  // ===== Markdown =====
+  "markdown.preview.breaks": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.markEditorSelection": true,
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.lineHeight": 1.6,
+  "markdown.previewFrontMatter": "show",
+  "markdown.extension.toc.updateOnSave": true,
+  "markdown.extension.toc.omittedFromToc": {
+    "[Glossário.md]": ["Glossário"]
+  },
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.print.absoluteImgPath": false,
+  "markdown.extension.toc.levels": "1..4",
+  "markdown.extension.toc.unorderedList.marker": "-",
+  "markdownlint.config": {
+    "MD013": false, // ignora comprimento de linha
+    "MD033": false, // ignora HTML inline
+    "MD041": false // ignora título obrigatório no início
+  },
+  "markdown.styles": [
+    "https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+  ],
+  "markdown-mermaid.darkModeTheme": "dark",
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "cSpell.language": "en,pt",
+  "cSpell.userWords": [
+    "ciandt",
+    "DevOps",
+    "Markdown",
+    "OpenAPI",
+    "Quarkus",
+    "TODO",
+    "VSCode"
+  ]
+}
