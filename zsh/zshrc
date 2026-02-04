@@ -179,10 +179,10 @@ setopt interactivecomments
 unsetopt beep
 
 # ========= Aliases =========
-[ -f "${0:a:h}/aliases.zsh" ] && source "${0:a:h}/aliases.zsh"
+[ -f "$HOME/.zsh/aliases.zsh" ] && source "$HOME/.zsh/aliases.zsh"
 
 # ========= Git aliases =========
-[ -f "${0:a:h}/../git/aliases.zsh" ] && source "${0:a:h}/../git/aliases.zsh"
+[ -f "$HOME/.git/aliases.zsh" ] && source "$HOME/.git/aliases.zsh"
 
 # ========= Powerlevel10k (config do prompt) =========
 [[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
