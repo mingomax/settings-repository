@@ -310,7 +310,7 @@ print_summary() {
   echo "   - zsh-completions"
   echo ""
   echo "4. ${YELLOW}NVM (Node Version Manager)${NC}"
-  echo "   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash"
+  echo "   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/<latest-version>/install.sh | bash"
   echo ""
   echo "5. ${YELLOW}SSH Keys${NC}"
   echo "   Copie suas chaves SSH para: $HOME/.ssh/keys/"
