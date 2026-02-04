@@ -20,17 +20,6 @@ SKIP_PACKAGES=false
 SKIP_SYMLINKS=false
 SKIP_GIT=false
 
-# Parse argumentos
-while [[ $# -gt 0 ]]; do
-  case $1 in
-    --no-packages) SKIP_PACKAGES=true; shift ;;
-    --no-symlinks) SKIP_SYMLINKS=true; shift ;;
-    --no-git) SKIP_GIT=true; shift ;;
-    -h|--help) show_help; exit 0 ;;
-    *) echo "Argumento desconhecido: $1"; show_help; exit 1 ;;
-  esac
-done
-
 show_help() {
   cat << EOF
 Uso: $0 [OPÇÕES]
@@ -46,6 +35,17 @@ Exemplo:
   $0 --no-packages      # Setup sem instalar pacotes
 EOF
 }
+
+# Parse argumentos
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --no-packages) SKIP_PACKAGES=true; shift ;;
+    --no-symlinks) SKIP_SYMLINKS=true; shift ;;
+    --no-git) SKIP_GIT=true; shift ;;
+    -h|--help) show_help; exit 0 ;;
+    *) echo "Argumento desconhecido: $1"; show_help; exit 1 ;;
+  esac
+done
 
 log_info() {
   echo -e "${BLUE}ℹ${NC} $1"
