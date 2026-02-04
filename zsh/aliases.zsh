@@ -12,6 +12,6 @@ alias k='kubectl'
 alias fd='fdfind'  # no Ubuntu o binário chama fdfind
 
 # ===== Navegação pessoal =====
-alias work='cd "$HOME/Workspaces/Professional/ciandt"'
-alias personal='cd "$HOME/Workspaces/Personal"'
-alias tools='cd "$HOME/Tools"'
+alias work='cd "${WORK_DIR:-$HOME/Workspaces/Professional/ciandt}"'
+alias personal='cd "${PERSONAL_DIR:-$HOME/Workspaces/Personal}"'
+alias tools='cd "${TOOLS_DIR:-$HOME/Tools}"'
