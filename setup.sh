@@ -279,7 +279,7 @@ setup_phpstorm() {
   
   if [ -d "$DOTFILES_DIR/phpstorm" ] && [ -d "$PHPSTORM_CONFIG" ]; then
     # Backup das configurações existentes
-    if [ ! -d "$PHPSTORM_CONFIG.backup" ]; then
+    if [ -d "$PHPSTORM_CONFIG" ] && [ ! -d "$PHPSTORM_CONFIG.backup" ]; then
       cp -r "$PHPSTORM_CONFIG" "$PHPSTORM_CONFIG.backup"
       log_warning "Backup de configurações PHPStorm criado: $PHPSTORM_CONFIG.backup"
     fi
@@ -310,7 +310,7 @@ print_summary() {
   echo "   - zsh-completions"
   echo ""
   echo "4. ${YELLOW}NVM (Node Version Manager)${NC}"
-  echo "   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/<latest-version>/install.sh | bash"
+  echo "   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash"
   echo ""
   echo "5. ${YELLOW}SSH Keys${NC}"
   echo "   Copie suas chaves SSH para: $HOME/.ssh/keys/"
