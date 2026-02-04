@@ -102,7 +102,6 @@ build/
 .next/
 .nuxt/
 .svelte-kit/
-coverage/
 .eslintcache
 .parcel-cache/
 .turbo/
