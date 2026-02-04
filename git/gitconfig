@@ -7,31 +7,41 @@
 # Branch padrão e pulls mais seguros
 [init]
   defaultBranch = main
+
 [pull]
-  rebase = true
+	rebase = true
+
 [rebase]
   autosquash = true
+	autoStash = true
+
 [fetch]
-  prune = true
+	prune = true
 
 [color]
   ui = auto
+
 [core]
   editor = code-insiders -w
   autocrlf = input # normaliza LF no commit
   whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
-  excludesFile = ~/.gitignore_global
-  attributesFile = ~/.gitattributes_global
+  excludesFile = ~/.gitignore
+  attributesFile = ~/.gitattributes
+
+[help]
+  autocorrect = 1
 
 # Diff/merge no VS Code
 [diff]
   tool = vscode
+
 [difftool "vscode"]
   cmd = code-insiders --wait --diff "$LOCAL" "$REMOTE"
 
 [merge]
   tool = vscode
   conflictstyle = diff3
+
 [mergetool "vscode"]
   cmd = code-insiders --wait "$MERGED"
   prompt = false
@@ -40,6 +50,7 @@
 [pager]
   log = delta
   reflog = delta
+
 [delta]
   navigate = true
   line-numbers = true
@@ -65,18 +76,11 @@
 
 # Alias úteis (compatíveis com atalhos do zsh)
 [alias]
-  s = status -sb
-  co = checkout
-  br = branch
-  ci = commit
-  st = status
-  sw = switch
-  unstage = reset HEAD --
+  unstage = restore --staged .
   last = log -1 HEAD
   nb = "!f(){ git switch -c \"$1\"; }; f"
   cm = "!f(){ git commit -m \"$*\"; }; f"
   amend = commit --amend --no-edit
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   # Undo last commit but keep changes
   soft = reset --soft HEAD~1
   # Push current branch (set upstream)

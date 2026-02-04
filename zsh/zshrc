@@ -38,22 +38,11 @@ export EDITOR="code-insiders -w"
 export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
 export PATH="$JAVA_HOME/bin:$PATH"
 
-# ========= Aliases úteis (Java/Maven/Quarkus) =========
-alias mvnci='mvn -T 1C -U -e -DskipTests clean install'
-alias mvnrt='mvn -T 1C -DskipTests'
-alias qdev='mvn quarkus:dev'
-
 # ========= Node/NPM/NVM =========
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# ========= Docker & Kubernetes =========
-alias d='docker'
-alias dc='docker compose'
-alias k='kubectl'
-
 # ========= fzf / bat / fd =========
-alias fd='fdfind'  # no Ubuntu o binário chama fdfind
 export FZF_DEFAULT_COMMAND='fdfind --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--height=40% --border --inline-info'
@@ -86,23 +75,11 @@ setopt correct
 setopt interactivecomments
 unsetopt beep
 
-# ===== Navegação pessoal =====
-alias work='cd "$HOME/Workspaces/Professional/ciandt"'
-alias personal='cd "$HOME/Workspaces/Personal"'
-alias tools='cd "$HOME/Tools"'
+# ========= Aliases =========
+[ -f "${0:a:h}/aliases.zsh" ] && source "${0:a:h}/aliases.zsh"
 
 # ========= Git aliases =========
-alias gst='git status -sb'
-alias ga='git add -A'
-alias gc='git commit -m'
-alias gca='git commit -a -m'
-alias gco='git checkout'
-alias gb='git switch -c'
-alias gp='git push'
-alias gl='git pull --rebase --autostash'
-alias gd='git diff'
-alias glg='git log --oneline --graph --decorate -n 30'
-alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+[ -f "${0:a:h}/../git/aliases.zsh" ] && source "${0:a:h}/../git/aliases.zsh"
 
 # ========= Powerlevel10k (config do prompt) =========
 [[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
