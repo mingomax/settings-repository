@@ -1,0 +1,85 @@
+[includeIf "gitdir:/home/domingost/Workspaces/Professional/**"]
+  path = /home/domingost/Workspaces/Personal/dotfiles/git/work.gitconfig
+
+[includeIf "gitdir:/home/domingost/Workspaces/Personal/**"]
+  path = /home/domingost/Workspaces/Personal/dotfiles/git/personal.gitconfig
+
+# Branch padrão e pulls mais seguros
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[rebase]
+  autosquash = true
+[fetch]
+  prune = true
+
+[color]
+  ui = auto
+[core]
+  editor = code-insiders -w
+  autocrlf = input # normaliza LF no commit
+  whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
+  excludesFile = ~/.gitignore_global
+  attributesFile = ~/.gitattributes_global
+
+# Diff/merge no VS Code
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code-insiders --wait --diff "$LOCAL" "$REMOTE"
+
+[merge]
+  tool = vscode
+  conflictstyle = diff3
+[mergetool "vscode"]
+  cmd = code-insiders --wait "$MERGED"
+  prompt = false
+
+# Pager de diffs (usa 'delta' se instalado)
+[pager]
+  log = delta
+  reflog = delta
+[delta]
+  navigate = true
+  line-numbers = true
+  syntax-theme = OneHalfDark
+  side-by-side = true
+
+# Push: facilitar primeiro push
+[push]
+  autoSetupRemote = true
+
+[credential]
+  helper = /usr/lib/git-core/git-credential-libsecret
+
+[gpg]
+  format = ssh
+  program = gpg
+
+[gpg "ssh"]
+  allowedSignersFile = ~/.config/git/allowed_signers
+
+[commit]
+  gpgsign = true
+
+# Alias úteis (compatíveis com atalhos do zsh)
+[alias]
+  s = status -sb
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  sw = switch
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  nb = "!f(){ git switch -c \"$1\"; }; f"
+  cm = "!f(){ git commit -m \"$*\"; }; f"
+  amend = commit --amend --no-edit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  # Undo last commit but keep changes
+  soft = reset --soft HEAD~1
+  # Push current branch (set upstream)
+  pc = push -u origin HEAD
+  # lg = log --oneline --graph --decorate -n 30
+  please = push --force-with-lease

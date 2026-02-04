@@ -1,0 +1,4 @@
+# Carrega o agent env criado pelo script ssh-agent-start (se existir)
+if [ -f ~/.ssh/agent.env ]; then
+  source_env ~/.ssh/agent.env
+fi

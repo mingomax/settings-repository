@@ -1,0 +1,24 @@
+# SSH - Dados sensíveis e específicos da máquina
+ssh/keys/id_*
+ssh/keys/*.pem
+ssh/keys/*.key
+ssh/agent.env
+ssh/agent.envrc
+ssh/agent.sock
+ssh/known_hosts*
+ssh/config_backup*
+
+# Backups e temporários
+*.bak
+*.backup
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Dados de ambiente locais
+.env
+.env.local
