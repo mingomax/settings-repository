@@ -98,7 +98,6 @@ pnpm-debug.log*
 .pnp/
 .pnp.js
 dist/
-build/
 .next/
 .nuxt/
 .svelte-kit/
