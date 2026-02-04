@@ -2,7 +2,6 @@
   name = Domingos Teruel
   email = domingost@ciandt.com
   signingkey = ~/.ssh/keys/id_ed25519_ciandt.pub
-  # signingkey = D0CB6D8EF12432B6
 
 [commit]
   gpgsign = true

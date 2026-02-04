@@ -2,7 +2,6 @@
   name = Domingos Teruel
   email = mingomax@dteruel.net.br
   signingkey =  ~/.ssh/keys/id_ed25519_mingomax_github.pub
-  # signingkey = 1D92CC486070B54B
 
 [commit]
   gpgsign = true
