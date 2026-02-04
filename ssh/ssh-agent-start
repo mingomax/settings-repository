@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SOCK="$HOME/.ssh/agent.sock"
+ENVFILE="$HOME/.ssh/agent.env"
+
+mkdir -p "$HOME/.ssh"
+chmod 700 "$HOME/.ssh"
+
+start_agent() {
+  if [ -e "$SOCK" ] && ! ss -xl | grep -q "$SOCK"; then
+    rm -f "$SOCK"
+  fi
+
+  if ! eval "$(ssh-agent -a "$SOCK")" >/dev/null 2>&1; then
+    echo "Failed to start ssh-agent" >&2
+    return 1
+  fi
+
+  {
+    echo "export SSH_AUTH_SOCK=${SSH_AUTH_SOCK:-}"
+    echo "export SSH_AGENT_PID=${SSH_AGENT_PID:-}"
+  } > "$ENVFILE"
+  chmod 600 "$ENVFILE"
+}
+
+if [ -f "$ENVFILE" ]; then
+  # carregar só para validação interna do script (não exporta para shell pai)
+  # shellcheck disable=SC1090
+  source "$ENVFILE" >/dev/null 2>&1 || true
+fi
+
+if [ -z "${SSH_AUTH_SOCK:-}" ] || [ ! -S "${SSH_AUTH_SOCK:-}" ] || ! ssh-add -l >/dev/null 2>&1; then
+  start_agent || true
+fi
+
+add_key_if_missing() {
+  local key="$1"
+  if [ -f "$key" ]; then
+    local fp
+    fp="$(ssh-keygen -lf "$key" | awk '{print $2}')"
+    if ! ssh-add -l 2>/dev/null | grep -q "$fp"; then
+      if [ -t 0 ]; then
+        ssh-add "$key"
+      else
+        true
+      fi
+    fi
+  fi
+}
+
+add_key_if_missing "$HOME/.ssh/keys/id_ed25519_ciandt"
+add_key_if_missing "$HOME/.ssh/keys/id_ed25519_mingomax_bitbucket"
+add_key_if_missing "$HOME/.ssh/keys/id_ed25519_mingomax_github"

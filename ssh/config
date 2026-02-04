@@ -1,0 +1,2 @@
+# Main entrypoint: keep this file tiny and stable.
+Include ~/.ssh/config.d/*.conf
