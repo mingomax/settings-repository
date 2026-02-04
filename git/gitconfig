@@ -1,8 +1,8 @@
 [includeIf "gitdir:/home/domingost/Workspaces/Professional/**"]
-  path = /home/domingost/Workspaces/Personal/dotfiles/git/work.gitconfig
+  path = ~/Workspaces/Professional/dotfiles/git/work.gitconfig
 
 [includeIf "gitdir:/home/domingost/Workspaces/Personal/**"]
-  path = /home/domingost/Workspaces/Personal/dotfiles/git/personal.gitconfig
+  path = ~/Workspaces/Personal/dotfiles/git/personal.gitconfig
 
 # Branch padrão e pulls mais seguros
 [init]
