@@ -62,7 +62,7 @@
   autoSetupRemote = true
 
 [credential]
-  helper = /usr/lib/git-core/git-credential-libsecret
+  helper = libsecret
 
 [gpg]
   format = ssh
