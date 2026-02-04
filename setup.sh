@@ -279,7 +279,7 @@ setup_phpstorm() {
   
   if [ -d "$DOTFILES_DIR/phpstorm" ] && [ -d "$PHPSTORM_CONFIG" ]; then
     # Backup das configurações existentes
-    if [ -d "$PHPSTORM_CONFIG" ] && [ ! -d "$PHPSTORM_CONFIG.backup" ]; then
+    if [ ! -d "$PHPSTORM_CONFIG.backup" ]; then
       cp -r "$PHPSTORM_CONFIG" "$PHPSTORM_CONFIG.backup"
       log_warning "Backup de configurações PHPStorm criado: $PHPSTORM_CONFIG.backup"
     fi
