@@ -1,0 +1,15 @@
+[commit]
+  gpgsign = true
+
+[gpg]
+  format = ssh
+
+[includeIf "gitdir:~/Workspaces/Personal/"]
+  path = ~/Workspaces/Personal/dotfiles/git/personal.gitconfig
+
+[includeIf "gitdir:~/Workspaces/Work/"]
+  path = ~/Workspaces/Work/dotfiles/git/work.gitconfig
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true

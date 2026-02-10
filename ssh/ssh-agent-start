@@ -8,8 +8,9 @@ mkdir -p "$HOME/.ssh"
 chmod 700 "$HOME/.ssh"
 
 start_agent() {
-  if [ -e "$SOCK" ] && ! ss -xl | grep -q "$SOCK"; then
-    rm -f "$SOCK"
+  # Usar método portável: test -S para verificar se socket existe
+  if [ -e "$SOCK" ] && ! [ -S "$SOCK" ]; then
+    rm -f "$SOCK" 2>/dev/null || true
   fi
 
   if ! eval "$(ssh-agent -a "$SOCK")" >/dev/null 2>&1; then
