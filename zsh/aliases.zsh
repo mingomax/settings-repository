@@ -9,9 +9,13 @@ alias dc='docker compose'
 alias k='kubectl'
 
 # ========= fzf / bat / fd =========
-alias fd='fdfind'  # no Ubuntu o binário chama fdfind
+# fd pode ser nomeado 'fdfind' em Ubuntu (conflito com outro pacote)
+if command -v fdfind >/dev/null 2>&1 && ! command -v fd >/dev/null 2>&1; then
+  alias fd='fdfind'
+fi
 
 # ===== Navegação pessoal =====
-alias work='cd "${WORK_DIR:-$HOME/Workspaces/Professional/ciandt}"'
+# Usar variáveis de ambiente (configuradas no zshrc)
+alias work='cd "${WORK_DIR:-$HOME/Workspaces/Work}"'
 alias personal='cd "${PERSONAL_DIR:-$HOME/Workspaces/Personal}"'
 alias tools='cd "${TOOLS_DIR:-$HOME/Tools}"'

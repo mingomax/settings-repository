@@ -20,6 +20,16 @@ SKIP_PACKAGES=false
 SKIP_SYMLINKS=false
 SKIP_GIT=false
 
+# Detectar ambiente
+IS_WSL=false
+[ -f /proc/version ] && grep -qi wsl /proc/version && IS_WSL=true
+
+if [ "$IS_WSL" = true ]; then
+  log_info "Ambiente WSL detectado"
+else
+  log_info "Ambiente Linux nativo detectado"
+fi
+
 show_help() {
   cat << EOF
 Uso: $0 [OPÇÕES]
@@ -89,27 +99,38 @@ setup_packages() {
       sudo apt-get update
       sudo apt-get install -y \
         git curl wget build-essential \
-        zsh direnv \
-        bat fdfind ripgrep \
-        code-insiders 2>/dev/null || true
+        zsh direnv
+      
+      # Pacotes opcionais (não falha se não conseguir)
+      sudo apt-get install -y bat fd-find ripgrep 2>/dev/null || log_warning "Alguns pacotes opcionais não foram instalados"
+      
+      # Locale pt_BR
+      sudo locale-gen pt_BR.UTF-8 2>/dev/null || log_warning "Não foi possível gerar locale pt_BR"
+      
+      # Code (não code-insiders, que é mais instável)
+      if ! command -v code &>/dev/null; then
+        log_info "VS Code não detectado. Instalando..."
+        wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - 2>/dev/null || true
+        sudo apt-get install -y code 2>/dev/null || log_warning "VS Code não foi instalado"
+      fi
       ;;
     fedora|rhel|centos)
       sudo dnf install -y \
         git curl wget gcc-c++ make redhat-rpm-config \
-        zsh direnv \
-        bat fd-find ripgrep \
-        code-insiders 2>/dev/null || true
+        zsh direnv
+      
+      sudo dnf install -y bat fd-find ripgrep 2>/dev/null || log_warning "Alguns pacotes opcionais não foram instalados"
       ;;
     arch)
       sudo pacman -Sy --noconfirm \
         git curl wget base-devel \
-        zsh direnv \
-        bat fd ripgrep \
-        code-insiders 2>/dev/null || true
+        zsh direnv
+      
+      sudo pacman -Sy --noconfirm bat fd ripgrep 2>/dev/null || log_warning "Alguns pacotes opcionais não foram instalados"
       ;;
     *)
       log_warning "Distribuição desconhecida: $DISTRO"
-      log_info "Por favor, instale os pacotes manualmente"
+      log_info "Por favor, instale os pacotes manualmente (git, zsh, direnv requeridos)"
       return 1
       ;;
   esac
@@ -137,6 +158,25 @@ setup_git() {
   fi
 
   log_info "Configurando Git..."
+  
+  # Detectar editor Git disponível
+  GIT_EDITOR=""
+  if command -v code-insiders &>/dev/null; then
+    GIT_EDITOR="code-insiders -w"
+  elif command -v code &>/dev/null; then
+    GIT_EDITOR="code -w"
+  elif command -v nano &>/dev/null; then
+    GIT_EDITOR="nano"
+  elif command -v vim &>/dev/null; then
+    GIT_EDITOR="vim"
+  fi
+  
+  if [ -n "$GIT_EDITOR" ]; then
+    git config --global core.editor "$GIT_EDITOR"
+    log_success "Editor Git configurado: $GIT_EDITOR"
+  else
+    log_warning "Nenhum editor Git encontrado. Configure manualmente: git config --global core.editor <seu-editor>"
+  fi
   
   # Cria symlink do gitconfig
   if [ -f "$DOTFILES_DIR/git/gitconfig" ]; then

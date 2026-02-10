@@ -1,0 +1,54 @@
+{
+  "chat.tools.terminal.outputLocation": "chat",
+  "github.copilot.nextEditSuggestions.enabled": true,
+
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+
+  // ---------- Windows terminal profiles ----------
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash",
+      "icon": "terminal-git-bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+
+  // ---------- Linux / WSL terminal profiles ----------
+  // Isso só é usado quando o VS Code está conectado via Remote - WSL (contexto Linux).
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/usr/bin/zsh",
+      "args": [
+        "-l"
+      ]
+    },
+    "bash": {
+      "path": "/usr/bin/bash",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh"
+}

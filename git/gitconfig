@@ -1,8 +1,8 @@
-[includeIf "gitdir:~/Workspaces/Personal/**"]
-  path = ~/Workspaces/Personal/dotfiles/git/personal.gitconfig
+[includeIf "gitdir:${HOME}/Workspaces/Personal/**"]
+  path = ${HOME}/Workspaces/Personal/dotfiles/git/personal.gitconfig
 
-[includeIf "gitdir:~/Workspaces/Professional/**"]
-  path = ~/Workspaces/Personal/dotfiles/git/work.gitconfig
+[includeIf "gitdir:${HOME}/Workspaces/Work/**"]
+  path = ${HOME}/Workspaces/Personal/dotfiles/git/work.gitconfig
 
 # Branch padrão e pulls mais seguros
 [init]
@@ -22,7 +22,9 @@
   ui = auto
 
 [core]
-  editor = code-insiders -w
+  # Editor: detectado dinamicamente no setup.sh
+  # Fallback: se EDITOR não estiver setado, usa código padrão
+  editor = code -w
   autocrlf = input # normaliza LF no commit
   whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
   excludesFile = ~/.gitignore
